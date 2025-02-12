@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run Python Script') {
             steps {
-                sh 'python3 script.py' // For Linux/macOS
+                sh 'python3 greet.py' // For Linux/macOS
                 // bat 'python script.py' // Uncomment for Windows
             }
         }
