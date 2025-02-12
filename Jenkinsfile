@@ -2,19 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Run Python Script') {
             steps {
-                echo 'Building...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
+                sh 'python3 script.py' // For Linux/macOS
+                // bat 'python script.py' // Uncomment for Windows
             }
         }
     }
